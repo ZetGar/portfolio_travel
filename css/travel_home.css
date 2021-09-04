@@ -420,7 +420,7 @@ section.main .mn_bg .road {
   width: 100vw;
   height: 200px;
   background-image: url(./../images/road.png);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
