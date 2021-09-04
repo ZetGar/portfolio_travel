@@ -441,10 +441,10 @@ section.suggestion {
 
 section.suggestion .sg_container {
   position: relative;
-  top: -100px;
+  top: -80px;
   z-index: 200;
   width: 900px;
-  height: 300px;
+  height: 250px;
   margin: 0 auto;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -579,34 +579,23 @@ footer .fot_container .fot_right {
   width: 150px;
 }
 
-footer .fot_container .fot_right .fot_list {
-  overflow: hidden;
-  display: block;
-  position: relative;
-  z-index: 100;
-  width: 150px;
+footer .fot_container .fot_right .fot_list select {
+  width: 100%;
   height: 25px;
+  color: #fff;
+  font-family: "noto sans CJK KR";
   font-size: 1.2rem;
-  line-height: 25px;
-  border: 1px solid #777;
+  text-indent: 10px;
+  background-color: #555;
+  border: 1px solid #555;
 }
 
-footer .fot_container .fot_right .fot_list span {
-  position: absolute;
-  right: -1px;
-  top: -2px;
+footer .fot_container .fot_right .fot_list select option {
   display: block;
-  width: 25px;
-  height: 27px;
-  background-color: #777;
-  background-image: url(./../images/fot_btn_down.png);
-  background-size: 70%;
-  background-repeat: no-repeat;
-  background-position: center 6px;
-}
-
-footer .fot_container .fot_right .fot_list.on .fot_btn {
-  background-image: url(./../images/fot_btn_up.png);
+  font-size: 1.2rem;
+  text-indent: 10px;
+  line-height: 25px;
+  box-shadow: none;
 }
 
 footer .fot_container .fot_right ul {
