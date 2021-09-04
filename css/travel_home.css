@@ -421,7 +421,7 @@ section.main .mn_bg .road {
   height: 200px;
   background-image: url(./../images/road.png);
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
 }
 
 section.main .mn_bg .road span {
