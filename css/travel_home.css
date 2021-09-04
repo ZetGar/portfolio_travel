@@ -334,7 +334,7 @@ section.main {
 
 section.main .mn_bg .mn_city {
   position: absolute;
-  bottom: 60px;
+  bottom: 40px;
   z-index: 50;
   display: flex;
   width: calc(100vw * 6);
@@ -352,7 +352,7 @@ section.main .mn_bg .mn_city li {
 
 section.main .mn_bg .cloude {
   position: absolute;
-  top: 0;
+  top: 50px;
   z-index: 0;
   display: flex;
   width: calc(100vw * 4);
@@ -415,7 +415,7 @@ section.main .mn_bg .bus .wheel_b {
 
 section.main .mn_bg .road {
   position: absolute;
-  bottom: 100px;
+  bottom: 80px;
   z-index: 100;
   width: 100vw;
   height: 200px;
