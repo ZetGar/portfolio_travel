@@ -9,12 +9,11 @@ body {
   position: relative;
   z-index: -9999;
   width: 100vw;
-}
 
-body {
-  font-family: "noto sans CJK KR";
   color: #222;
+  font-family: "noto sans CJK KR";
   font-size: 0.652rem;
+
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -25,188 +24,140 @@ header {
   z-index: 99999;
 
   width: 100vw;
-  height: 80px;
-  background-color: #f2f2f2;
-  border-bottom: 1px solid #ebebeb;
+  height: 120px;
+  padding-top: 30px;
+  background-color: #222;
+  box-sizing: border-box;
 
   .hd_bg {
     display: none;
     position: absolute;
-    top: 80px;
-
-    width: 100vw;
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.7);
-    // border-bottom: 1px solid #f2f2f2;
+    top: 120px;
+    width: 100%;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.6);
   }
-
-  .hd_content {
+  .hd_container {
     position: relative;
-    width: 1000px;
+    width: 1200px;
     margin: 0 auto;
 
-    h1.logo {
-      width: 100px;
-      height: 50px;
-      padding: 15px 0;
+    color: #fff;
 
-      font-size: 2rem;
-      line-height: 50px;
+    .hd_top {
+      display: flex;
+      justify-content: space-between;
+      width: 1200px;
+      height: 50px;
+      span {
+        width: 180px;
+        display: block;
+        font-size: 0.8rem;
+        i {
+          font-size: 1.5rem;
+          margin-right: 5px;
+        }
+        a {
+          color: #fff;
+          font-weight: 800;
+          font-size: 1.2rem;
+          margin-left: 5px;
+          padding-left: 10px;
+          border-left: 2px solid #fff;
+        }
+      }
+      h1 {
+        a {
+          color: #fff;
+          font-size: 2.5rem;
+          font-weight: 800;
+        }
+      }
+      .mypage {
+        display: flex;
+
+        width: 160px;
+        li {
+          a {
+            display: block;
+            width: 80px;
+            color: #fff;
+            font-size: 1.1rem;
+            text-align: center;
+            border-left: 2px solid #fff;
+            &:hover {
+              display: inline-block;
+              font-weight: 800;
+            }
+          }
+          &:first-child {
+            a {
+              border-left: none;
+            }
+          }
+        }
+      }
     }
 
     nav {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      left: calc(50% - 600px);
+
+      width: 1200px;
+      height: 300px;
+      margin: 0 auto;
+      border-top: 1px solid rgb(92, 92, 92);
+      box-sizing: border-box;
+
       .gnb {
         display: flex;
-        justify-content: center;
-
         position: absolute;
-        top: 0;
-        left: 150px;
-
-        width: 330px;
-        padding: 15px 0;
-
-        font-size: 1.3rem;
-        font-weight: 800;
-        text-align: center;
-        line-height: 50px;
+        z-index: 9999;
 
         li {
-          width: 110px;
+          width: 150px;
           a {
-            &:hover {
-              color: #ff6600;
-            }
+            display: block;
+            width: 100%;
+
+            color: #fff;
+            line-height: 40px;
+            text-align: center;
+            font-size: 1.2rem;
           }
 
-          &:nth-of-type(1) {
-            .lnb {
-              li {
-                &:nth-of-type(1),
-                &:nth-of-type(2),
-                &:nth-of-type(6) {
-                  &:after {
-                    content: "";
-                    position: absolute;
-                    bottom: -60px;
-                    width: 15px;
-                    height: 15px;
-                    margin-left: -8px;
-
-                    background-image: url(./../images/up.png);
-                    background-size: contain;
-
-                    animation: updown 1s infinite;
-                  }
-
-                  @keyframes updown {
-                    0% {
-                      transform: translateY(-2px);
-                    }
-                    50% {
-                      transform: translateY(2px);
-                    }
-                    100% {
-                      transform: translateY(-2px);
-                    }
-                  }
-                }
-              }
+          &:hover,
+          &.on {
+            margin-top: -2px;
+            border-top: 2px solid #f3da6a;
+            a {
+              color: #f3da6a;
+              font-weight: 800;
             }
           }
 
           .lnb {
             display: none;
-            position: relative;
-            z-index: 9999;
-
-            width: 1000px;
-            margin-top: 15px;
-
             li {
-              float: left;
-              width: 110px;
-              line-height: 40px;
-            }
-
-            a {
               display: block;
-
-              &:hover {
-                color: #fff;
-                background-color: #ff6600;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .mypage {
-      > ul {
-        display: flex;
-        justify-content: space-between;
-
-        position: absolute;
-        top: 0;
-        right: 0;
-
-        width: 130px;
-        line-height: 50px;
-
-        > li {
-          width: 40px;
-          height: 40px;
-          margin: 20px 0;
-
-          font-size: 1rem;
-          text-indent: -9999px;
-
-          background-size: 60%;
-          background-repeat: no-repeat;
-          background-position: center;
-
-          cursor: pointer;
-
-          &:nth-of-type(1) {
-            background-image: url(./../images/gnb_alert.png);
-            &:hover {
-              background-image: url(./../images/gnb_alert_c.png);
-            }
-          }
-          &:nth-of-type(2) {
-            background-image: url(./../images/gnb_reservation.png);
-            &:hover {
-              background-image: url(./../images/gnb_reservation_c.png);
-            }
-          }
-          &:nth-of-type(3) {
-            background-image: url(./../images/gnb_user.png);
-            &:hover {
-              background-image: url(./../images/gnb_user_c.png);
-              ol {
-                display: block;
-              }
-            }
-          }
-
-          ol {
-            display: none;
-            margin: 10px 0 10px -30px;
-            width: 100px;
-            background-color: rgba(255, 255, 255, 0.5);
-            li {
-              text-indent: 0;
-              text-align: center;
-              line-height: 40px;
-              font-weight: 800;
-
-              &:nth-of-type(1) {
-                border-bottom: 1px solid rgb(145, 145, 145);
-              }
               a {
-                &:hover {
-                  color: #ff6600;
+                display: block;
+                width: 150px;
+                height: 40px;
+                color: #fff;
+                font-weight: 400;
+                line-height: 40px;
+              }
+
+              &:hover,
+              &.on {
+                margin-top: 0;
+                border-top: none;
+                a {
+                  color: #f3da6a;
+                  font-weight: 800;
                 }
               }
             }
@@ -215,432 +166,138 @@ header {
       }
     }
   }
-}
-
-h4 {
-  display: inline-block;
-  font-size: 1.2rem;
-  margin: 0;
-  margin-bottom: 40px;
-  color: #ff6600;
-  font-weight: 800;
-  line-height: 25px;
-  border-bottom: 2px solid #ff6600;
-}
-h2 {
-  margin-bottom: 30px;
-  font-size: 2.5rem;
-  font-weight: 800;
-}
-p {
-  margin-bottom: 40px;
-  font-size: 1.3rem;
-  line-height: 1.5;
 }
 
 section.main {
+  position: relative;
   width: 100vw;
   height: 600px;
-  margin-top: 80px;
-  background-color: #fce5e5;
-}
+  padding-top: 120px;
+  background-color: #6ed9fa;
+  background: linear-gradient(#3477cf, #5cc4e4, #fff);
 
-section.reservation {
-  .res_container {
-    width: 1000px;
-    height: 300px;
-    margin: -80px auto 0;
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  }
-}
-
-section.travel_slide {
-  position: relative;
-  z-index: -9999;
-  width: 100vw;
-  padding: 100px 0;
-  .tra_title {
-    text-align: center;
-
-    h4 {
-      margin-bottom: 20px;
-    }
-    h2 {
-      margin-bottom: 50px;
-    }
-  }
-  // background-color: #f2f2f2;
-
-  .tra_slide {
-    overflow: hidden;
-    width: 1000px;
-    height: 450px;
-
-    margin: 0 auto;
-
-    .screen {
-      display: flex;
-      justify-content: space-evenly;
-
-      position: relative;
-      z-index: 1000;
-
-      .slide_container {
-        position: absolute;
-        top: 0;
-
-        width: 250px;
-        height: 400px;
-        margin: 0 10px;
-        padding: 20px;
-        background-color: #fff;
-        border: 1px solid #eee;
-        border-radius: 20px;
-
-        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-        transform: scale(0.8);
-        transition: 0.5s;
-
-        &:nth-of-type(1) {
-          left: -300px;
-        }
-        &:nth-of-type(2) {
-          left: 0;
-        }
-        &:nth-of-type(3) {
-          left: 350px;
-          transform: scale(1);
-        }
-        &:nth-of-type(4) {
-          left: 700px;
-        }
-        &:nth-of-type(5) {
-          left: 1000px;
-        }
-
-        .nic_top {
-          display: flex;
-
-          .nic_pic {
-            width: 45px;
-            height: 45px;
-            margin-right: 15px;
-
-            background-size: cover;
-            background-position: center;
-            border-radius: 50%;
-
-            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-            &:nth-of-type(1) {
-              background-image: url(./../images/nic_pic.png);
-            }
-          }
-
-          .nic_content {
-            padding: 5px 0;
-            h3 {
-              font-size: 1.5rem;
-            }
-            span {
-              display: inline-block;
-              margin-top: 5px;
-              color: #999;
-              font-weight: 800;
-            }
-          }
-        }
-      }
-
-      .tra_pic {
-        width: 250px;
-        height: 240px;
-        margin-top: 20px;
-        background-color: #fff;
-        background-size: cover;
-
-        &.seoul {
-          background-image: url(./../images/seoul.jpg);
-        }
-
-        &.gangneung {
-          background-image: url(./../images/gangneung.jpg);
-        }
-
-        &.dokdo {
-          background-image: url(./../images/dokdo.jpg);
-          background-position: center center;
-        }
-
-        &.damyang {
-          background-image: url(./../images/damyang.jpg);
-        }
-
-        &.jeju {
-          background-image: url(./../images/jeju.jpg);
-        }
-      }
-
-      .tra_content {
-        margin-top: 30px;
-        padding-top: 15px;
-        border-top: 1px solid #bebebe;
-        p {
-          margin: 0;
-          padding: 0;
-        }
-        span {
-          color: #999999;
-          font-size: 1.2rem;
-        }
-        div.heart {
-          display: block;
-          position: absolute;
-          right: 20px;
-          bottom: 30px;
-          width: 35px;
-          height: 35px;
-          background-image: url(./../images/heart.png);
-          // background-image: url(./../images/heart_c.png);
-          background-size: contain;
-          background-position: center;
-        }
-        @keyframes heart {
-          0% {
-            background-image: url(./../images/heart_c.png);
-            transform: translateY(-2px);
-          }
-          50% {
-            transform: translateY(2px);
-          }
-          100% {
-            background-image: url(./../images/heart_c.png);
-            transform: translateY(0px);
-          }
-        }
-        @keyframes b_heart {
-          0% {
-            background-image: url(./../images/heart.png);
-            transform: translateY(-2px);
-          }
-          50% {
-            transform: translateY(2px);
-          }
-          100% {
-            background-image: url(./../images/heart.png);
-            transform: translateY(0px);
-          }
-        }
-      }
-    }
-  }
-}
-.tra_button {
-  display: flex;
-  justify-content: center;
-  width: 100px;
-  margin: 20px auto 0;
-
-  a {
-    display: block;
-    width: 30px;
-    height: 30px;
-    margin: 0 auto;
-
-    text-indent: -9999px;
-    border-radius: 50%;
-
-    background-color: #fff;
-    background-size: 60%;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    cursor: pointer;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
-
-    &.play {
-      background-image: url(./../images/start.png);
-    }
-
-    &.pause {
-      background-image: url(./../images/stop.png);
-    }
-  }
-  a:hover,
-  a.on {
-    box-shadow: 2px 2px 3px inset rgba(0, 0, 0, 0.2);
-  }
-}
-
-section.theme {
-  width: 100vw;
-  height: 800px;
-  background-color: #fde3aa;
-
-  .theme_container {
-    width: 1000px;
-    height: 800px;
-    margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-}
-
-section.best {
-  width: 100vw;
-  background-image: url(./../images/dokdo_bg1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  .be_container {
-    position: relative;
-    width: 1000px;
-    height: 540px;
-    margin: 0 auto;
-    box-sizing: border-box;
-
-    .best_left {
-      position: relative;
-      left: 0;
-      width: 450px;
-      height: 100%;
-      background-color: rgba(57, 88, 105, 0.7);
-      box-sizing: border-box;
-
-      &:after {
-        display: block;
-
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 100;
-
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-      }
-
-      .best_content {
-        padding: 80px 50px;
-
-        h2 {
-          margin-bottom: 40px;
-          color: #fff;
-          font-size: 2.5rem;
-          font-weight: 600;
-          line-height: 35px;
-
-          &::before {
-            display: block;
-            content: "이번달 추천 여행지";
-            width: 105px;
-            margin-bottom: 20px;
-            color: #73d7e4;
-            font-size: 1.2rem;
-            font-weight: 800;
-            line-height: 20px;
-            border-bottom: 1.5px solid #73d7e4;
-          }
-        }
-        p {
-          width: 250px;
-          margin-bottom: 70px;
-        }
-        .btn {
-          margin-top: 15px;
-          &:nth-of-type(1) {
-            margin-top: 50px;
-          }
-        }
-      }
-    }
-
-    .best_right {
-      display: flex;
-      justify-content: space-between;
+  .mn_bg {
+    .mn_city {
       position: absolute;
-      top: 70px;
-      right: 0;
-      z-index: 100;
-      width: 640px;
-      height: 400px;
+      bottom: 60px;
+      z-index: 50;
+      display: flex;
+      width: calc(100vw * 6);
+      height: 600px;
+      animation: city 15s linear infinite;
 
-      .best_container {
-        display: flex;
-        li {
-          width: 250px;
-          height: 400px;
+      li {
+        width: calc(100vw * 2);
+        height: 480px;
+        background-image: url(./../images/background_ani.png);
+        background-size: cover;
+        background-repeat: repeat-x;
+      }
+    }
 
-          border-radius: 20px;
-          background-color: #fff;
-          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    .cloude {
+      position: absolute;
+      top: 0;
+      z-index: 0;
+      display: flex;
+      width: calc(100vw * 4);
+      height: 600px;
+      animation: city 20s -10s linear infinite;
 
-          a {
-            .best_pic {
-              width: 100%;
-              height: 50%;
-              margin: 0;
-              padding: 0;
-              background-color: #222;
-              background-image: url(./../images/dokdo_1.jpg);
-              background-size: cover;
-              background-position: center;
+      li {
+        width: calc(100vw * 2);
+        height: 600px;
+        background-image: url(./../images/cloude.png);
+        background-size: cover;
+        background-repeat: repeat-x;
+      }
+    }
 
-              border-radius: 20px 20px 0 0;
-            }
-            h3 {
-              margin: 30px 20px 10px;
-              font-size: 1.7rem;
-              line-height: 25px;
+    @keyframes city {
+      0% {
+        transform: translateX(0vw);
+      }
 
-              &:before {
-                display: block;
-                content: "#독도이벤트 #광복절";
+      100% {
+        transform: translateX(-200vw);
+      }
+    }
 
-                color: #9c9a9a;
-                font-size: 1rem;
-              }
-            }
-            p {
-              margin: 0 20px;
-            }
-          }
+    .bus {
+      position: absolute;
+      bottom: 130px;
+      left: calc(50% - 110px);
+      z-index: 150;
+      width: 220px;
+      height: 150px;
+      background-image: url(./../images/bus.png);
+      background-size: contain;
+
+      .wheel {
+        position: absolute;
+        bottom: 10px;
+        left: calc(50% - 75px);
+        width: 40px;
+        height: 40px;
+        background-image: url(./../images/wheel.png);
+        background-size: contain;
+
+        animation: wheel 2s linear infinite;
+      }
+      .wheel_b {
+        position: absolute;
+
+        left: calc(50% + 32px);
+      }
+
+      @keyframes wheel {
+        0% {
+          transform: rotate(0deg);
         }
-        li:nth-of-type(2) {
-          position: absolute;
-          right: 0;
-          width: 355px;
-          background-color: #fff;
-          a {
-            display: block;
-
-            iframe {
-              width: 100%;
-              height: 200px;
-              border-radius: 20px 20px 0 0;
-
-              h3 {
-                margin: 30px 20px 10px;
-                font-size: 1.7rem;
-                line-height: 25px;
-
-                &:before {
-                  display: block;
-                  content: "#동영상 #광복절";
-
-                  color: #9c9a9a;
-                  font-size: 1rem;
-                }
-              }
-              p {
-                margin: 0 20px;
-              }
-            }
-          }
+        100% {
+          transform: rotate(359deg);
         }
       }
     }
+
+    .road {
+      position: absolute;
+      bottom: 100px;
+      z-index: 100;
+
+      width: 100vw;
+      height: 200px;
+      background-image: url(./../images/road.png);
+      background-size: contain;
+
+      span {
+        display: block;
+        position: absolute;
+        bottom: -100px;
+        width: 100vw;
+        height: 100px;
+        background-color: #e8e5dd;
+      }
+    }
+  }
+}
+
+section.suggestion {
+  position: relative;
+
+  width: 100vw;
+  height: 300px;
+  // background-color: #e8e5dd;
+
+  .sg_container {
+    position: relative;
+    top: -100px;
+    z-index: 200;
+    width: 900px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 }
 

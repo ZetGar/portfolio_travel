@@ -7,6 +7,7 @@
   <title>travel</title>
   <link rel="stylesheet" href="./css/travel_home.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
   <script src="./js/jquery.min.js"></script>
   <script src="./js/function_travel.js"></script>
@@ -15,25 +16,113 @@
   <div id="wrap">
     <header>
       <div class="hd_bg"></div>
-      <div class="hd_content">
+      <div class="hd_container">
+        <div class="hd_top">
+        <span>
+          <i class="fas fa-headset"></i>
+           상담원 연결  
+           <a href="tel:1544-0000">1544 - 0000</a>
+        </span>
+        <h1 class="logo"><a href="#">TRAVEL</a></h1>
+        <ol class="mypage">
+          <li><a href="#">join us</a></li>
+          <li><a href="#">log in</a></li>
+        </ol>
+        </div>
+        <nav>
+          <ol class="gnb">
+            <li>
+              <a href="#">국내여행</a>
+              <ul class="lnb">
+                <li><a href="#">제주</a></li>
+                <li><a href="#">서울</a></li>
+                <li><a href="#">경상<span></span></a></li>
+                <li><a href="#">경기</a></li>
+                <li><a href="#">전라</a></li>
+                <li><a href="#">강원<span></span></a></li>
+                <li><a href="#">충청</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">호텔/펜션</a>
+              <ol class="lnb">
+                <li><a href="#">호텔예약</a></li>
+                <li><a href="#">펜션/풀빌라 예약</a></li>
+              </ol>
+            </li>
+  
+            <li>
+              <a href="#">테마여행</a>
+              <ol class="lnb">
+                <li><a href="#">밤도깨비족</a></li>
+                <li><a href="#">저전거족</a></li>
+                <li><a href="#">뚜벅이족</a></li>
+                <li><a href="#">캠핑족</a></li>
+                <li><a href="#">나홀로 여행족</a></li>
+                <li><a href="#">레저/스포츠족</a></li>
+              </ol>
+            </li>
+  
+            <li>
+              <a href="#">마이페이지</a>
+              <ol class="lnb">
+                <li><a href="#">알림</a></li>
+                <li><a href="#">예약내역</a></li>
+                <li><a href="#">마이메뉴</a></li>
+              </ol>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </header>
+
+    <section class="main">
+      <div class="mn_bg">
+        <ol class="mn_city">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+        <ol class="cloude">
+          <li></li>
+          <li></li>
+        </ol>
+
+        <div class="bus">
+          <div class="wheel"></div>
+          <div class="wheel wheel_b"></div>
+        </div>
+        <div class="road">
+          <span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="suggestion">
+      <div class="sg_container">
+        
+      </div>
+    </section>
+      <!-- <div class="hd_content">
       <h1 class="logo"><a href="#">Travel</a></h1>
       <nav>
         <ul class="gnb">
-          <li>
+          <li class="on">
             <a href="#">국내여행</a>
             <ol class="lnb">
-              <li><a href="#1">제주</a></li>
+              <li><a href="#">제주</a></li>
               <li><a href="#">서울</a></li>
-              <li><a href="#">경상</a></li>
+              <li><a href="#">경상<span></span></a></li>
               <li><a href="#">경기</a></li>
               <li><a href="#">전라</a></li>
-              <li><a href="#">강원</a></li>
+              <li><a href="#">강원<span></span></a></li>
               <li><a href="#">충청</a></li>
             </ol>
           </li>
 
           <li>
-            <a href="#">호텔여행</a>
+            <a href="#">호텔/펜션</a>
             <ol class="lnb">
               <li><a href="#">호텔예약</a></li>
               <li><a href="#">펜션/풀빌라 예약</a></li>
@@ -41,26 +130,28 @@
           </li>
 
           <li>
-            <a href="#">인기여행추천</a>
+            <a href="#">테마여행</a>
             <ol class="lnb">
-              <li><a href="#">테마여행</a></li>
+              <li><a href="#">밤도깨비족</a></li>
+              <li><a href="#">저전거족</a></li>
+              <li><a href="#">뚜벅이족</a></li>
+              <li><a href="#">캠핑족</a></li>
+              <li><a href="#">나홀로 여행족</a></li>
+              <li><a href="#">레저/스포츠족</a></li>
             </ol>
           </li>
+
+          <li>
+            <a href="#">마이페이지</a>
+            <ol class="lnb">
+              <li><a href="#">알림</a></li>
+              <li><a href="#">예약내역</a></li>
+              <li><a href="#">마이메뉴</a></li>
+            </ol>
+          </li>
+
         </ul>
       </nav>
-      <div class="mypage">
-        <ul>
-          <li><a href="#">알림</a></li>
-          <li><a href="#">예약내역</a></li>
-          <li>
-            <a href="#">마이메뉴</a>
-            <ol>
-              <li><a href="#">로그인</a></li>
-              <li><a href="#">회원가입</a></li>
-            </ol>
-          </li>
-        </ul>
-      </div>
       </div>
     </header>
 
@@ -269,7 +360,7 @@
           </ul>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <footer>
       <div class="fot_container">
