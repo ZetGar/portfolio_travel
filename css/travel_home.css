@@ -880,7 +880,7 @@ section.item .item_container .inr li:nth-of-type(6) a:before {
 section.tripevent {
   width: 100vw;
   height: 400px;
-  padding: 50px 0;
+  padding: 100px 0;
   background-color: #e7e7e7;
 }
 
@@ -943,8 +943,8 @@ footer .fot_container .fot_top ul {
   display: flex;
   position: relative;
   top: -20px;
-  right: -890px;
-  width: 300px;
+  right: -1000px;
+  width: 200px;
 }
 
 footer .fot_container .fot_top ul li {
@@ -981,38 +981,51 @@ footer .fot_container .fot_left h2 {
   font-weight: 800;
 }
 
-footer .fot_container .fot_left p {
+footer .fot_container .fot_left .inline {
+  width: 70%;
+}
+
+footer .fot_container .fot_left .inline p {
   display: inline-block;
+  line-height: 20px;
+}
+
+footer .fot_container .fot_left .inline p:nth-of-type(1), footer .fot_container .fot_left .inline p:nth-of-type(3) {
+  padding-left: 0;
+}
+
+footer .fot_container .fot_left .inline p:nth-of-type(6) {
+  margin-top: 20px;
+}
+
+footer .fot_container .fot_left .inline p span {
+  color: #777;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+footer .fot_container .fot_left .inline p.call {
+  font-size: 1.5rem;
+  font-weight: 800;
+  border-right: none;
+}
+
+footer .fot_container .fot_left p {
   margin: 3px 0;
   padding: 0 10px;
   font-size: 1.2rem;
   border-right: 2px solid #c4c4c4;
 }
 
-footer .fot_container .fot_left p:nth-of-type(1), footer .fot_container .fot_left p:nth-of-type(3) {
-  padding-left: 0;
-}
-
-footer .fot_container .fot_left p:nth-of-type(6) {
-  margin-top: 20px;
-}
-
-footer .fot_container .fot_left p span {
-  color: #777;
-  font-weight: 800;
-  font-size: 1rem;
-}
-
-footer .fot_container .fot_left p.call {
-  font-size: 1.5rem;
-  font-weight: 800;
-  border-right: none;
-}
-
 footer .fot_container .fot_left p.caution {
   padding-left: 0;
   font-size: 1rem;
   border-right: none;
+  line-height: 15px;
+}
+
+footer .fot_container .fot_left p.caution:nth-of-type(1) {
+  margin-top: 20px;
 }
 
 footer .fot_container .fot_left a {
@@ -1028,7 +1041,7 @@ footer .fot_container .fot_right {
   position: absolute;
   right: 0;
   top: 100px;
-  width: 150px;
+  width: 200px;
 }
 
 footer .fot_container .fot_right .fot_list select {
