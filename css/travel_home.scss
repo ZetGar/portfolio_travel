@@ -425,7 +425,7 @@ section.travel_slide {
       h2 {
         color: #fff;
         font-size: 4.2rem;
-        font-weight: 800;
+        font-weight: 600;
       }
 
       span {
@@ -447,7 +447,7 @@ section.travel_slide {
 
     .tra_slide {
       overflow: hidden;
-      width: 55%;
+      width: 53%;
       // background-color: #fff;
 
       .screen {
@@ -655,10 +655,49 @@ section.travel_slide {
   }
 }
 
-section.aa {
+section.item {
   width: 100vw;
   height: 200px;
   background-color: #fff;
+
+  .item_container {
+    width: 1200px;
+    margin: 0 auto;
+
+    .inr {
+      display: flex;
+      justify-content: space-evenly;
+
+      width: 1200px;
+      margin: 0 auto;
+
+      li > a {
+        display: block;
+        width: 150px;
+        height: 150px;
+        padding-top: 100px;
+        margin: 25px 0;
+        color: #777;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: center;
+        box-sizing: border-box;
+
+        &::before {
+          content: "";
+          display: block;
+          width: 100px;
+          height: 100px;
+          margin: -90px auto 10px;
+          border: 1px solid #777;
+        }
+
+        &:hover {
+          font-weight: 800;
+        }
+      }
+    }
+  }
 }
 section.bb {
   width: 100vw;
