@@ -12,7 +12,7 @@ a.btn {
   font-size: 1.2rem;
   line-height: 30px;
   font-weight: 800;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #4dbdac;
 
   box-sizing: border-box;
 
@@ -28,7 +28,7 @@ a.btn {
 
     width: 4px;
     height: 100%;
-    background: #65aab3;
+    background: #fff;
 
     transition: 0.5s ease-in-out;
     transition-delay: 0.5s;
@@ -40,7 +40,7 @@ a.btn {
     right: 0;
     width: 4px;
     height: 100%;
-    background: #65aab3;
+    background: #fff;
 
     transition: 0.5s ease-in-out;
     transition-delay: 0.5s;
@@ -73,7 +73,7 @@ a.btn {
     z-index: 1000;
     width: 150px;
 
-    color: #65aab3;
+    color: #fff;
 
     transition: 0.5s;
 
@@ -83,7 +83,7 @@ a.btn {
     &:nth-of-type(2) {
       transform: scale(3);
       opacity: 0;
-      color: #000;
+      color: #4dbdac;
       transition-delay: 0s;
     }
   }
