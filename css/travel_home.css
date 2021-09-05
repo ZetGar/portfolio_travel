@@ -566,9 +566,9 @@ section.travel_slide .tra_container .tra_title h4 {
   display: inline-block;
   margin-bottom: 40px;
   padding-top: 5px;
-  color: #19361e;
+  color: #b4f5eb;
   font-size: 1.2rem;
-  border-top: 3px solid #19361e;
+  border-top: 3px solid #b4f5eb;
 }
 
 section.travel_slide .tra_container .tra_title h2 {
@@ -808,13 +808,13 @@ section.travel_slide .tra_container .tra_button a.on {
 section.aa {
   width: 100vw;
   height: 200px;
-  background-color: #000;
+  background-color: #fff;
 }
 
 section.bb {
   width: 100vw;
   height: 500px;
-  background-color: #fff;
+  background-color: #e7e7e7;
 }
 
 footer {
