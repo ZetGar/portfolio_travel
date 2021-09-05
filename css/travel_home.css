@@ -261,7 +261,6 @@ header .hd_container nav {
   position: absolute;
   left: calc(50% - 600px);
   width: 1200px;
-  height: 300px;
   margin: 0 auto;
   border-top: 1px solid #5c5c5c;
   box-sizing: border-box;
@@ -433,10 +432,46 @@ section.main .mn_bg .road span {
   background-color: #e8e5dd;
 }
 
+section.main .talk {
+  position: absolute;
+  top: 230px;
+  left: calc(50% - 100px);
+  z-index: 500;
+  width: 200px;
+  height: 230px;
+  background-image: url(./../images/mn_talk.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: talk 2s infinite linear;
+}
+
+section.main .talk h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 32%;
+}
+
+section.main .talk h2 span {
+  color: #fdbe36;
+}
+
+@keyframes talk {
+  0% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
+}
+
 section.suggestion {
   position: relative;
   width: 100vw;
   height: 300px;
+  background-color: #58c3ca;
 }
 
 section.suggestion .sg_container {
@@ -444,10 +479,73 @@ section.suggestion .sg_container {
   top: -80px;
   z-index: 200;
   width: 900px;
-  height: 250px;
+  height: 350px;
   margin: 0 auto;
+  padding: 30px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+section.suggestion .sg_container h2 {
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+section.suggestion .sg_container .where {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #555;
+}
+
+section.suggestion .sg_container .where input {
+  width: 170px;
+  height: 40px;
+  margin-bottom: 20px;
+  font-family: "noto sans CJK KR";
+  text-indent: 10px;
+  font-size: 1.2rem;
+  border: 1px solid #555;
+}
+
+section.suggestion .sg_container .where .date {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  height: 42px;
+  margin-bottom: 20px;
+  font-family: "noto sans CJK KR";
+  text-indent: 10px;
+  font-size: 1.2rem;
+  line-height: 40px;
+  border: 1px solid #555;
+}
+
+section.suggestion .sg_container .where .date input {
+  width: 130px;
+  height: 42px;
+  margin: 0;
+  border: none;
+}
+
+section.suggestion .sg_container .where a {
+  display: block;
+  width: 120px;
+  height: 42px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 42px;
+  text-align: center;
+  font-weight: 800;
+  background-color: #222;
+}
+
+section.travel_slide {
+  width: 100vw;
+  height: 500px;
+  background-color: #58c3ca;
 }
 
 footer {
@@ -584,17 +682,15 @@ footer .fot_container .fot_right .fot_list select {
   height: 25px;
   color: #fff;
   font-family: "noto sans CJK KR";
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 800;
   text-indent: 10px;
+  line-height: 25px;
   background-color: #555;
   border: 1px solid #555;
 }
 
 footer .fot_container .fot_right .fot_list select option {
-  display: block;
-  font-size: 1.2rem;
-  text-indent: 10px;
-  line-height: 25px;
   box-shadow: none;
 }
 
