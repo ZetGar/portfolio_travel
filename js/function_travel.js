@@ -13,14 +13,13 @@ $(function(){
     $('.hd_bg').stop().slideUp();
   });
 
-
-});
   //section_travel_slide : 하트 클릭
   const $nicBox = $('.slide_container>a');
   const $heart = $('.heart');
 
   $nicBox.on('click', function(evt){
     evt.preventDefault();
+
     nowIdx = $nicBox.index(this);
 
     $heart.toggleClass('on');
@@ -88,6 +87,8 @@ $(function(){
     $('.pause').addClass('on');
     clearInterval(intervalKey);
   });
+
+});
 
 
 

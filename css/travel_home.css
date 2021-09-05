@@ -663,7 +663,7 @@ section.travel_slide .tra_container .tra_slide .screen .slide_container a .nic_t
 }
 
 section.travel_slide .tra_container .tra_slide .screen .slide_container a .nic_top .nic_pic:nth-of-type(1) {
-  background-image: url(./../images/mn_talk.png);
+  background-image: url(./../images/nic_pic.png);
   background-size: contain;
 }
 
