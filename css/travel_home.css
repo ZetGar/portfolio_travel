@@ -897,6 +897,27 @@ section.tripevent .te_container .trip {
   background-color: #fff;
 }
 
+section.tripevent .te_container .trip h2 {
+  font-size: 1.7rem;
+}
+
+section.tripevent .te_container .trip ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+section.tripevent .te_container .trip ul li > a {
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+section.tripevent .te_container .trip ul li > a img {
+  display: block;
+  width: 100%;
+}
+
 section.tripevent .te_container .event {
   width: 30%;
   background-color: #fff;

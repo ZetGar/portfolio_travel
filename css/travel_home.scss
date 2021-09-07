@@ -751,6 +751,25 @@ section.tripevent {
     .trip {
       width: 65%;
       background-color: #fff;
+
+      h2 {
+        font-size: 1.7rem;
+      }
+      ul {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        li > a {
+          display: block;
+          width: 200px;
+          height: 200px;
+
+          img {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
     }
     .event {
       width: 30%;
