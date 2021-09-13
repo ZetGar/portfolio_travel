@@ -990,10 +990,90 @@ section.tripevent .te_container .event {
 }
 
 section.camping {
+  position: relative;
   width: 100vw;
   height: 800px;
   margin: 0 auto;
-  background-color: #31313b;
+  background: linear-gradient(#371849, #12335e, #091d36);
+}
+
+section.camping .camping_bg .bg_full {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 800px;
+  background-size: contain;
+  background-image: url(./../images/camping.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+section.camping .camping_bg .star1 {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 800px;
+  background-size: contain;
+  background-image: url(./../images/main_star1.png);
+  background-position: center bottom;
+  animation: star 2s infinite;
+}
+
+section.camping .camping_bg .star2 {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 800px;
+  background-size: cover;
+  background-image: url(./../images/main_star2.png);
+  background-position: center bottom;
+  animation: star 2s -5s infinite;
+}
+
+@keyframes star {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+section.camping .camping_bg .light {
+  position: absolute;
+  left: calc(50% - 100px);
+  bottom: 50px;
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-image: url(./../images/camping_f_light.png);
+  animation: fire 5s infinite;
+}
+
+@keyframes fire {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+section.camping .camping_bg .fire {
+  position: absolute;
+  left: calc(50% - 35px);
+  bottom: 110px;
+  width: 70px;
+  height: 100px;
+  background-size: contain;
+  background-image: url(./../images/camping_fire.png);
 }
 
 section.camping .camping_container {
@@ -1019,11 +1099,22 @@ section.camping .camping_container h2 {
 }
 
 section.camping .camping_container p {
-  margin: 30px 0 80px;
+  margin: 30px 0 30px;
   color: #fff;
   font-weight: 400;
   font-size: 1.3rem;
   line-height: 20px;
+}
+
+section.camping .camping_container a.btn_c {
+  display: block;
+  width: 100px;
+  height: 30px;
+  margin: 0 auto;
+  color: #fff;
+  line-height: 30px;
+  font-weight: 800;
+  border: 1px solid #fff;
 }
 
 section.camping .camping_container .place {
