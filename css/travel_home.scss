@@ -848,6 +848,7 @@ section.tripevent {
 
 section.camping {
   position: relative;
+  z-index: -9999;
   width: 100vw;
   height: 800px;
   margin: 0 auto;
@@ -858,6 +859,7 @@ section.camping {
     .bg_full {
       position: absolute;
       bottom: 0;
+      z-index: -9997;
       width: 100vw;
       height: 800px;
       background-size: contain;
@@ -869,6 +871,7 @@ section.camping {
     .star1 {
       position: absolute;
       top: 0;
+      z-index: -9998;
       width: 100vw;
       height: 800px;
       background-size: contain;
@@ -879,6 +882,7 @@ section.camping {
     .star2 {
       position: absolute;
       top: 0;
+      z-index: -9998;
       width: 100vw;
       height: 800px;
       background-size: cover;
@@ -927,7 +931,7 @@ section.camping {
     .fire {
       position: absolute;
       left: calc(50% - 35px);
-      bottom: 110px;
+      bottom: 90px;
 
       width: 70px;
       height: 100px;
@@ -958,7 +962,7 @@ section.camping {
       font-weight: 600;
     }
     p {
-      margin: 30px 0 30px;
+      margin: 30px 0 50px;
 
       color: #fff;
       font-weight: 400;
@@ -967,15 +971,68 @@ section.camping {
     }
     a.btn_c {
       display: block;
-      width: 100px;
+      position: relative;
+      overflow: hidden;
+      width: 120px;
       height: 30px;
       margin: 0 auto;
 
-      color: #fff;
+      color: rgb(235, 205, 107);
       line-height: 30px;
       font-weight: 800;
-      border: 1px solid #fff;
-      // background-color: #fff;
+      // border: 1px solid rgb(235, 205, 107);
+      transition: 0.5s;
+
+      &:hover {
+        color: #000;
+        background-color: rgb(235, 205, 107);
+        box-shadow: 0 0 50px rgb(235, 205, 107);
+        transition-delay: 0.3s;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid rgb(235, 205, 107);
+        border-left: 2px solid rgb(235, 205, 107);
+        transition: 0.5s;
+      }
+      &:hover:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-top: 2px solid rgb(235, 205, 107);
+        border-left: 2px solid rgb(235, 205, 107);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        border-bottom: 2px solid rgb(235, 205, 107);
+        border-right: 2px solid rgb(235, 205, 107);
+        transition: 0.5s;
+      }
+      &:hover:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        border-bottom: 2px solid rgb(235, 205, 107);
+        border-right: 2px solid rgb(235, 205, 107);
+        transition: 0.5s;
+      }
     }
 
     .place {

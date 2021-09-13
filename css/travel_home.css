@@ -991,6 +991,7 @@ section.tripevent .te_container .event {
 
 section.camping {
   position: relative;
+  z-index: -9999;
   width: 100vw;
   height: 800px;
   margin: 0 auto;
@@ -1000,6 +1001,7 @@ section.camping {
 section.camping .camping_bg .bg_full {
   position: absolute;
   bottom: 0;
+  z-index: -9997;
   width: 100vw;
   height: 800px;
   background-size: contain;
@@ -1011,6 +1013,7 @@ section.camping .camping_bg .bg_full {
 section.camping .camping_bg .star1 {
   position: absolute;
   top: 0;
+  z-index: -9998;
   width: 100vw;
   height: 800px;
   background-size: contain;
@@ -1022,6 +1025,7 @@ section.camping .camping_bg .star1 {
 section.camping .camping_bg .star2 {
   position: absolute;
   top: 0;
+  z-index: -9998;
   width: 100vw;
   height: 800px;
   background-size: cover;
@@ -1069,7 +1073,7 @@ section.camping .camping_bg .light {
 section.camping .camping_bg .fire {
   position: absolute;
   left: calc(50% - 35px);
-  bottom: 110px;
+  bottom: 90px;
   width: 70px;
   height: 100px;
   background-size: contain;
@@ -1099,7 +1103,7 @@ section.camping .camping_container h2 {
 }
 
 section.camping .camping_container p {
-  margin: 30px 0 30px;
+  margin: 30px 0 50px;
   color: #fff;
   font-weight: 400;
   font-size: 1.3rem;
@@ -1108,13 +1112,69 @@ section.camping .camping_container p {
 
 section.camping .camping_container a.btn_c {
   display: block;
-  width: 100px;
+  position: relative;
+  overflow: hidden;
+  width: 120px;
   height: 30px;
   margin: 0 auto;
-  color: #fff;
+  color: #ebcd6b;
   line-height: 30px;
   font-weight: 800;
-  border: 1px solid #fff;
+  transition: 0.5s;
+}
+
+section.camping .camping_container a.btn_c:hover {
+  color: #000;
+  background-color: #ebcd6b;
+  box-shadow: 0 0 50px #ebcd6b;
+  transition-delay: 0.3s;
+}
+
+section.camping .camping_container a.btn_c:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #ebcd6b;
+  border-left: 2px solid #ebcd6b;
+  transition: 0.5s;
+}
+
+section.camping .camping_container a.btn_c:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid #ebcd6b;
+  border-left: 2px solid #ebcd6b;
+}
+
+section.camping .camping_container a.btn_c:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #ebcd6b;
+  border-right: 2px solid #ebcd6b;
+  transition: 0.5s;
+}
+
+section.camping .camping_container a.btn_c:hover:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid #ebcd6b;
+  border-right: 2px solid #ebcd6b;
+  transition: 0.5s;
 }
 
 section.camping .camping_container .place {
