@@ -1124,7 +1124,7 @@ section.camping .camping_container a.btn_c {
 }
 
 section.camping .camping_container a.btn_c:hover {
-  color: #000;
+  color: #12335e;
   background-color: #ebcd6b;
   box-shadow: 0 0 50px #ebcd6b;
   transition-delay: 0.3s;
