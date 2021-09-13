@@ -888,7 +888,41 @@ section.camping {
       background-size: cover;
       background-image: url(./../images/main_star2.png);
       background-position: center bottom;
-      animation: star 2s -5s infinite;
+      animation: star 2.5s -5s infinite;
+    }
+
+    .star1 {
+      position: absolute;
+      top: 0;
+      z-index: -9998;
+      width: 100vw;
+      height: 800px;
+      background-size: contain;
+      background-image: url(./../images/main_star1.png);
+      background-position: center bottom;
+      animation: star 2s infinite;
+    }
+    .star2 {
+      position: absolute;
+      top: 0;
+      z-index: -9998;
+      width: 100vw;
+      height: 800px;
+      background-size: cover;
+      background-image: url(./../images/main_star2.png);
+      background-position: center bottom;
+      animation: star 2.5s -5s infinite;
+    }
+    .star3 {
+      position: absolute;
+      top: 0;
+      z-index: -9998;
+      width: 100vw;
+      height: 800px;
+      background-size: cover;
+      background-image: url(./../images/main_star1.png);
+      background-position: center bottom;
+      animation: star 1s -2s infinite;
     }
     @keyframes star {
       0% {
@@ -973,13 +1007,14 @@ section.camping {
       display: block;
       position: relative;
       overflow: hidden;
-      width: 120px;
-      height: 30px;
+      width: 130px;
+      height: 35px;
       margin: 0 auto;
 
       color: rgb(235, 205, 107);
-      line-height: 30px;
+      line-height: 35px;
       font-weight: 800;
+      font-size: 1.2rem;
       // border: 1px solid rgb(235, 205, 107);
       transition: 0.5s;
 

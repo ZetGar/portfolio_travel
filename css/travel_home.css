@@ -1031,7 +1031,43 @@ section.camping .camping_bg .star2 {
   background-size: cover;
   background-image: url(./../images/main_star2.png);
   background-position: center bottom;
-  animation: star 2s -5s infinite;
+  animation: star 2.5s -5s infinite;
+}
+
+section.camping .camping_bg .star1 {
+  position: absolute;
+  top: 0;
+  z-index: -9998;
+  width: 100vw;
+  height: 800px;
+  background-size: contain;
+  background-image: url(./../images/main_star1.png);
+  background-position: center bottom;
+  animation: star 2s infinite;
+}
+
+section.camping .camping_bg .star2 {
+  position: absolute;
+  top: 0;
+  z-index: -9998;
+  width: 100vw;
+  height: 800px;
+  background-size: cover;
+  background-image: url(./../images/main_star2.png);
+  background-position: center bottom;
+  animation: star 2.5s -5s infinite;
+}
+
+section.camping .camping_bg .star3 {
+  position: absolute;
+  top: 0;
+  z-index: -9998;
+  width: 100vw;
+  height: 800px;
+  background-size: cover;
+  background-image: url(./../images/main_star1.png);
+  background-position: center bottom;
+  animation: star 1s -2s infinite;
 }
 
 @keyframes star {
@@ -1114,12 +1150,13 @@ section.camping .camping_container a.btn_c {
   display: block;
   position: relative;
   overflow: hidden;
-  width: 120px;
-  height: 30px;
+  width: 130px;
+  height: 35px;
   margin: 0 auto;
   color: #ebcd6b;
-  line-height: 30px;
+  line-height: 35px;
   font-weight: 800;
+  font-size: 1.2rem;
   transition: 0.5s;
 }
 
