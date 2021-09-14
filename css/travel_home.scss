@@ -190,6 +190,162 @@ header {
   }
 }
 
+.login {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: translateY(-100vh);
+  transition: all 0.6s;
+
+  &.on {
+    transform: translateY(0vh);
+
+    .login_container {
+      transform: translateY(0vh);
+    }
+  }
+
+  .login_container {
+    position: fixed;
+    top: calc(50% - 35%);
+    left: calc(50% - 13%);
+
+    width: 400px;
+    height: 550px;
+    padding: 25px;
+
+    background-color: #fff;
+    box-sizing: border-box;
+    transform: translateY(-100vh);
+    transition: all 0.6s 0.2s;
+  }
+
+  h2 {
+    padding: 20px 0 10px 0;
+    font-size: 2.4rem;
+    text-align: center;
+    border-bottom: 1px solid #888;
+  }
+
+  .login_text {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    a {
+      display: block;
+      padding: 0 10px;
+      margin: 10px 0;
+
+      color: #a1a1a1;
+      text-align: right;
+      font-size: 1.2rem;
+      font-weight: 600;
+
+      border-right: 1.5px solid #a1a1a1;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      &:hover {
+        color: #222;
+        font-weight: 600;
+        text-decoration: underline;
+      }
+    }
+  }
+  div {
+    margin-top: 20px;
+
+    &:nth-of-type(1) {
+      margin-top: 50px;
+    }
+    label {
+      display: none;
+    }
+    input {
+      display: block;
+      width: 340px;
+      height: 40px;
+      margin: 20px auto 0;
+      border-radius: 5px;
+      box-shadow: initial;
+      border: 1px solid #888;
+      box-sizing: border-box;
+
+      &[placeholder] {
+        color: #888;
+        font-size: 1.2rem;
+        text-indent: 10px;
+      }
+
+      &:focus {
+        outline: none;
+        border: 2px solid rgb(248, 191, 35);
+        border-radius: 5px;
+      }
+    }
+    p {
+      display: none;
+      margin-top: 10px;
+      color: rgb(138, 19, 19);
+      font-weight: 800;
+      font-size: 1.1rem;
+      text-indent: 10px;
+    }
+  }
+
+  .login_btn {
+    display: block;
+    width: 130px;
+    height: 35px;
+    margin: 40px auto 10px;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 35px;
+    text-align: center;
+
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1.5px solid #777;
+    box-shadow: none;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+      background-color: #222;
+      border: none;
+    }
+  }
+
+  a.btn_close {
+    display: block;
+    width: 360px;
+    margin: 30px auto 0;
+    padding-top: 20px;
+
+    color: #a1a1a1;
+    font-size: 1.5rem;
+    text-align: center;
+    border-top: 1px solid #a1a1a1;
+
+    &:hover {
+      color: #222;
+      font-weight: 600;
+    }
+  }
+}
+
 section.main {
   position: relative;
   width: 100vw;

@@ -26,7 +26,7 @@
         <h1 class="logo"><a href="#">TRAVEL</a></h1>
         <ol class="mypage">
           <li><a href="#">join us</a></li>
-          <li> <a href="#">log in</a></li>
+          <li> <a href="#" class="login_btn">log in</a></li>
         </ol>
         </div>
         <nav>
@@ -77,6 +77,35 @@
       </div>
     </header>
 
+    <div class="login">
+      <div class="login_container">
+        <h2>LOGIN</h2>
+
+        <form action="">
+        <div class="email">
+          <label for="userid">아이디</label>
+				  <input type="text" id="userid" placeholder="Travel ID">
+          <p>Travle ID가 누락되었습니다.</p>
+        </div>
+        <div class="pwd">
+          <label for="userpwd">패스워드</label>
+					<input type="password" id="userpwd"  placeholder="암호">
+          <p>암호가 맞지 않습니다.</p>
+        </div>
+
+        <button type="submit" class="login_btn">login</button>
+        </form>
+
+
+        <div class="login_text">
+        <a href="#">join us</a>
+        <a href="#">id 찾기</a>
+        <a href="#">password 찾기</a>
+        </div>
+          <a href="#" class="btn_close">close</a>
+      </div>
+    </div>
+
     <section class="main">
       <div class="mn_bg">
         <ol class="mn_city">
@@ -109,16 +138,7 @@
     <section class="suggestion">
       <div class="sg_container">
         <h2>호텔예약</h2>
-        <form action="" class="where">
-          <input type="text" name="" id="" placeholder="어디로 떠나세요?">
-          <div class="date">
-            <input type="date">
-             - 
-            <input type="date">
-          </div>
-          <input class="people" type="text" name="" id="" placeholder="어디로 떠나세요?">
-          <a href="#">숙소 검색</a>
-        </form>
+
       
       </div>
     </section>
