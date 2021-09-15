@@ -1,0 +1,149 @@
+@charset "utf-8";
+* {
+	scroll-behavior: smooth;
+}
+body {
+	font-family: 'noto sans CJK KR';
+}
+#wrap {
+	display: grid;
+	grid-template: repeat(4, auto)/1fr;
+	row-gap: 10px;
+}
+
+.tit {
+	width: 1000px;
+	margin: 0 auto;
+
+	text-align: center;
+	padding: 50px;
+	box-sizing: border-box;
+}
+.tit > h2 {
+	font-size: 2.3rem;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+.tit > p {
+	color: #c12525;
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.bg {
+	position: absolute;
+	width: 100vw;
+	height: 172px;
+	z-index: -9999;
+	background-color: #f4f4f4;
+	border-bottom: 2px solid #a0a0a0;
+}
+
+.content {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+/* header */
+header {
+	position: absolute;
+}
+
+header > .gnb {
+	display: flex;
+	justify-content: center;
+
+	position: absolute;
+	z-index: 2100;
+	left: calc(50% + 20px);
+
+	width: 100vw;
+}
+
+header > .gnb > li {
+	width: 200px;
+	padding-top: 40px;
+}
+
+header > .gnb > li > a {
+	display: block;
+	width: 150px;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	font-weight: 800;
+	border-radius: 30px;
+
+	color: #222;
+	border: 1px solid #222;
+}
+
+header > .gnb > li.on > a,
+header > .gnb > li:hover > a {
+	color: #fff;
+	background-color: #002238;
+	border: none;
+}
+
+/* section */
+section#ri_dok {
+	margin-top: 150px;
+	height: 1200px;
+}
+section#ri_dok > .content {
+	height: 1100px;
+
+	text-indent: -9999px;
+	font-size: 0;
+
+	background-image: url(./../images/bg1.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center top;
+}
+
+section#robbery {
+	height: 1200px;
+}
+section#robbery > .content {
+	height: 1000px;
+
+	text-indent: -9999px;
+	font-size: 0;
+
+	background-image: url(./../images/bg2.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center top;
+}
+
+section#getback {
+	height: 800px;
+}
+section#getback > .content {
+	height: 1000px;
+
+	text-indent: -9999px;
+	font-size: 0;
+
+	background-image: url(./../images/bg3.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center top;
+}
+section#Entrance {
+	height: 900px;
+}
+section#Entrance > .content {
+	width: 1000px;
+	height: 750px;
+
+	padding: 80px;
+
+	font-size: 1rem;
+	line-height: 1.7;
+}
+
+section#Entrance > .content > p {
+	margin-top: 15px;
+}
