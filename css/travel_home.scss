@@ -1046,29 +1046,6 @@ section.camping {
       background-position: center bottom;
       animation: star 2.5s -5s infinite;
     }
-
-    .star1 {
-      position: absolute;
-      top: 0;
-      z-index: -9998;
-      width: 100vw;
-      height: 800px;
-      background-size: contain;
-      background-image: url(./../images/main_star1.png);
-      background-position: center bottom;
-      animation: star 2s infinite;
-    }
-    .star2 {
-      position: absolute;
-      top: 0;
-      z-index: -9998;
-      width: 100vw;
-      height: 800px;
-      background-size: cover;
-      background-image: url(./../images/main_star2.png);
-      background-position: center bottom;
-      animation: star 2.5s -5s infinite;
-    }
     .star3 {
       position: absolute;
       top: 0;

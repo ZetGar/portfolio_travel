@@ -1,4 +1,75 @@
 $(function(){
+  const $header = $('header');
+  const $main = $('section.main');
+
+  $(window).on('scroll', function(){
+
+    if($(window).scrollTop()>0){
+      $header.addClass('sticky');
+      $main.addClass('sticky');
+    } 
+    if($(window).scrollTop()<=0){
+      $header.removeClass('sticky');
+      $main.removeClass('sticky');
+
+    }
+
+
+  });
+  
+
+
+
+  // login 모달창 열기
+  const $login= $('.login');
+  const $logBtn = $('a.login_btn');
+  const $close = $('.btn_close');
+
+
+  $logBtn.on('click', function(){
+    $login.toggleClass('on');
+  });
+  $close.on('click', function(){
+    $login.toggleClass('on');
+  });
+
+  
+
+  // 이메일, 비밀번호 정규식 검사
+  // var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;  //이메일 정규식
+  var regExp = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/;  //이메일 정규식
+
+  var regex = /^.*(?=^.{8,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/; //특수문자 / 문자 / 숫자 포함 형태의 8~15자리 이내의 암호 정규식
+
+  const $email = $('#userid');
+  const $pwd=$('#userpwd');
+  const $subBtn = $('button.login_btn');
+  
+
+  $('form').on('submit', function(e){
+    const $subEmail = $email.val();
+    const $subPwd= $pwd.val();
+
+
+    if(regExp.test($subEmail) == false){
+      e.preventDefault();
+      $('.email>p').show();
+    } else if( $subEmail == ''){
+      e.preventDefault();
+      $('.email>p').show();
+    } 
+    
+    if(regex.test($subPwd) == false){
+      e.preventDefault();
+      $('.pwd>p').show();
+    } else if($subPwd == ''){
+      e.preventDefault();
+      $('.pwd>p').show();
+    } 
+  });
+
+
+
   // 메뉴 위치변경
   const arrTopVal = [];
   const $mnu = $('.gnb>li>a');
