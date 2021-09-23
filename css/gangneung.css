@@ -34,6 +34,7 @@ header .hd_container {
 header .hd_container h1 > a {
   display: block;
   width: 100px;
+  color: #fff;
   font-size: 2.5rem;
 }
 
@@ -53,6 +54,7 @@ header .hd_container nav .gnb li a {
   display: block;
   width: 120px;
   height: 65px;
+  color: #fff;
   font-size: 1.3rem;
   text-align: center;
   font-weight: 600;
@@ -72,6 +74,7 @@ header .hd_container div {
 header .hd_container div a {
   display: block;
   width: 70px;
+  color: #fff;
   font-size: 1.1rem;
   text-align: center;
 }
@@ -120,13 +123,16 @@ footer {
 }
 
 footer p {
-  margin-top: 30px;
+  color: #555;
+  margin: 30px 0 10px;
+  font-size: 1.2rem;
 }
 
 footer address {
   color: #999;
   text-align: center;
   font-size: 1.3rem;
+  font-weight: 600;
   margin-bottom: 50px;
 }
 
@@ -149,7 +155,7 @@ section.main {
 
 section.main .mn_bg .mn_city {
   position: absolute;
-  bottom: -35px;
+  bottom: -40px;
   z-index: 50;
   display: flex;
   width: calc(100vw * 6);
@@ -167,7 +173,7 @@ section.main .mn_bg .mn_city li {
 
 section.main .mn_bg .cloude {
   position: absolute;
-  top: 50px;
+  top: 30px;
   z-index: 0;
   display: flex;
   width: calc(100vw * 4);
@@ -301,6 +307,18 @@ section.course .cs_container .cs_title h2 {
 section.course .cs_container .cs_title p {
   font-size: 1.3rem;
   line-height: 1.7;
+}
+
+section.course .cs_container .cs_title span {
+  display: block;
+  width: 180px;
+  height: 25px;
+  margin: 10px auto 0;
+  color: #222;
+  font-size: 1.1rem;
+  line-height: 25px;
+  font-weight: 600;
+  background-color: #ffc55f;
 }
 
 section.course .cs_container .cs_content {

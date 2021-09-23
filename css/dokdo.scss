@@ -1,122 +1,11 @@
 @import "_reset";
+@import "_header";
 
 $tablet: "screen and (max-width:992px)";
 $mobile: "screen and (max-width:768px)";
 
 * {
   scroll-behavior: smooth;
-}
-
-#wrap,
-body {
-  position: relative;
-  z-index: -9999;
-  width: 100vw;
-
-  color: #222;
-  font-family: "noto sans CJK KR";
-  font-size: 0.652rem;
-
-  box-sizing: border-box;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  z-index: 99999;
-
-  width: 100vw;
-  height: 80px;
-  padding-top: 30px;
-  box-sizing: border-box;
-
-  .hd_bg {
-    position: absolute;
-    top: -80px;
-    width: 100vw;
-    height: 80px;
-    background-color: #000;
-    transition: all 0.7s;
-  }
-  .hd_container {
-    position: relative;
-    width: 1000px;
-    margin: 0 auto;
-
-    color: #fff;
-    transition: all 0.7s;
-
-    h1 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: scale(1.1);
-
-      a {
-        color: #fff;
-        font-size: 2.5rem;
-        font-weight: 800;
-      }
-    }
-
-    nav {
-      position: absolute;
-      right: 0;
-      top: 0;
-
-      box-sizing: border-box;
-
-      .gnb {
-        display: flex;
-        justify-content: center;
-
-        li {
-          width: 130px;
-          margin-left: 20px;
-          a {
-            display: block;
-            width: 100%;
-
-            color: #fff;
-            line-height: 35px;
-            text-align: center;
-            font-size: 1.2rem;
-            border-radius: 20px;
-          }
-
-          &:hover,
-          &.on {
-            a {
-              color: #fff;
-              font-weight: 800;
-              border: none;
-
-              background-color: #12387e;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  &.sticky {
-    .hd_bg {
-      top: 0;
-    }
-    .hd_container {
-      .gnb > li:hover,
-      .gnb > li.on {
-        a {
-          color: #fff;
-          font-weight: 800;
-          border: none;
-
-          border: 1px solid #fff;
-          background-color: transparent;
-        }
-      }
-    }
-  }
 }
 
 .login {
@@ -983,27 +872,6 @@ div.flex {
         margin: 50px auto 0;
         color: rgb(39, 78, 128);
       }
-    }
-  }
-}
-footer {
-  width: 100vw;
-  height: 150px;
-  margin: 80px 0 50px;
-  text-align: center;
-  border-top: 1px solid #000;
-
-  p {
-    margin-top: 30px;
-  }
-  address {
-    color: #999;
-    text-align: center;
-    font-size: 1.3rem;
-    margin-bottom: 50px;
-
-    span {
-      font-weight: 800;
     }
   }
 }

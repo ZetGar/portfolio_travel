@@ -77,10 +77,6 @@ a:active {
   color: #222;
 }
 
-* {
-  scroll-behavior: smooth;
-}
-
 #wrap,
 body {
   position: relative;
@@ -90,93 +86,137 @@ body {
   font-family: "noto sans CJK KR";
   font-size: 0.652rem;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 header {
   position: fixed;
-  top: 0;
   z-index: 99999;
   width: 100vw;
-  height: 80px;
-  padding-top: 30px;
-  box-sizing: border-box;
-}
-
-header .hd_bg {
-  position: absolute;
-  top: -80px;
-  width: 100vw;
-  height: 80px;
-  background-color: #000;
-  transition: all 0.7s;
+  height: 70px;
+  line-height: 70px;
+  background-color: transparent;
+  transition: all 0.6s;
 }
 
 header .hd_container {
-  position: relative;
-  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
   margin: 0 auto;
-  color: #fff;
-  transition: all 0.7s;
 }
 
-header .hd_container h1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: scale(1.1);
-}
-
-header .hd_container h1 a {
+header .hd_container h1 > a {
+  display: block;
+  width: 100px;
   color: #fff;
   font-size: 2.5rem;
-  font-weight: 800;
 }
 
 header .hd_container nav {
   position: absolute;
-  right: 0;
-  top: 0;
-  box-sizing: border-box;
+  left: 550px;
 }
 
 header .hd_container nav .gnb {
   display: flex;
-  justify-content: center;
-}
-
-header .hd_container nav .gnb li {
-  width: 130px;
-  margin-left: 20px;
+  justify-content: space-between;
+  width: 400px;
+  box-sizing: border-box;
 }
 
 header .hd_container nav .gnb li a {
   display: block;
-  width: 100%;
+  width: 120px;
+  height: 65px;
   color: #fff;
-  line-height: 35px;
+  font-size: 1.3rem;
   text-align: center;
+  font-weight: 600;
+}
+
+header .hd_container nav .gnb li:hover > a,
+header .hd_container nav .gnb li.on > a {
+  color: #f3da6a;
+  font-weight: 800;
+}
+
+header .hd_container div {
+  display: flex;
+  width: 100px;
+}
+
+header .hd_container div a {
+  display: block;
+  width: 70px;
+  color: #fff;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+header .hd_container div a:hover {
+  font-weight: 600;
+}
+
+header.sticky {
+  height: 50px;
+  line-height: 50px;
+  background-color: #222;
+}
+
+header.sticky h1 > a {
+  color: #fff;
+  font-size: 2.3rem;
+}
+
+header.sticky nav > .gnb li a {
+  height: 45px;
+  color: #fff;
+  font-size: 1.15rem;
+}
+
+header.sticky nav > .gnb li:hover > a,
+header.sticky nav > .gnb li.on > a {
+  color: #f3da6a;
+  border-bottom: 5px solid #f3da6a;
+}
+
+header.sticky div > a {
+  color: #727272;
+}
+
+header.sticky div > a:hover {
+  color: #919191;
+}
+
+footer {
+  width: 100vw;
+  height: 150px;
+  margin: 80px 0 50px;
+  text-align: center;
+  border-top: 1px solid #000;
+}
+
+footer p {
+  color: #555;
+  margin: 30px 0 10px;
   font-size: 1.2rem;
-  border-radius: 20px;
 }
 
-header .hd_container nav .gnb li:hover a, header .hd_container nav .gnb li.on a {
-  color: #fff;
+footer address {
+  color: #999;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+footer address span {
   font-weight: 800;
-  border: none;
-  background-color: #12387e;
 }
 
-header.sticky .hd_bg {
-  top: 0;
-}
-
-header.sticky .hd_container .gnb > li:hover a,
-header.sticky .hd_container .gnb > li.on a {
-  color: #fff;
-  font-weight: 800;
-  border: none;
-  border: 1px solid #fff;
-  background-color: transparent;
+* {
+  scroll-behavior: smooth;
 }
 
 .login {
@@ -968,27 +1008,4 @@ div.flex section.card .card_container a {
   width: 150px;
   margin: 50px auto 0;
   color: #274e80;
-}
-
-footer {
-  width: 100vw;
-  height: 150px;
-  margin: 80px 0 50px;
-  text-align: center;
-  border-top: 1px solid #000;
-}
-
-footer p {
-  margin-top: 30px;
-}
-
-footer address {
-  color: #999;
-  text-align: center;
-  font-size: 1.3rem;
-  margin-bottom: 50px;
-}
-
-footer address span {
-  font-weight: 800;
 }

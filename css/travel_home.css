@@ -160,6 +160,11 @@ a.btn span:nth-of-type(2) {
   transition-delay: 0s;
 }
 
+#wrap {
+  position: relative;
+  z-index: -100;
+}
+
 header {
   position: fixed;
   top: 0;

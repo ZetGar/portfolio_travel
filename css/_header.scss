@@ -34,6 +34,7 @@ header {
       display: block;
       width: 100px;
 
+      color: #fff;
       font-size: 2.5rem;
     }
 
@@ -52,6 +53,7 @@ header {
             width: 120px;
             height: 65px;
 
+            color: #fff;
             font-size: 1.3rem;
             text-align: center;
             font-weight: 600;
@@ -72,6 +74,7 @@ header {
         display: block;
         width: 70px;
 
+        color: #fff;
         font-size: 1.1rem;
         text-align: center;
 
@@ -123,12 +126,15 @@ footer {
   border-top: 1px solid #000;
 
   p {
-    margin-top: 30px;
+    color: #555;
+    margin: 30px 0 10px;
+    font-size: 1.2rem;
   }
   address {
     color: #999;
     text-align: center;
     font-size: 1.3rem;
+    font-weight: 600;
     margin-bottom: 50px;
 
     span {

@@ -1,10 +1,10 @@
 $(function(){
   // header부분 스크롤메뉴
   $(window).on('scroll',function(){
-    if($(window).scrollTop()<100){
+    if($(window).scrollTop()<=0){
       $('header').removeClass('sticky');
     }
-    if($(window).scrollTop()>100){
+    if($(window).scrollTop()>0){
       $('header').addClass('sticky');
     }
   });
