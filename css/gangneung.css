@@ -141,15 +141,146 @@ body {
 }
 
 section.main {
+  position: relative;
   width: 100vw;
   height: 600px;
   background: linear-gradient(#3477cf, #5cc4e4, #fff);
 }
 
+section.main .mn_bg .mn_city {
+  position: absolute;
+  bottom: -35px;
+  z-index: 50;
+  display: flex;
+  width: calc(100vw * 6);
+  height: 600px;
+  animation: city 15s linear infinite;
+}
+
+section.main .mn_bg .mn_city li {
+  width: calc(100vw * 2);
+  height: 480px;
+  background-image: url(./../images/background_ani.png);
+  background-size: cover;
+  background-repeat: repeat-x;
+}
+
+section.main .mn_bg .cloude {
+  position: absolute;
+  top: 50px;
+  z-index: 0;
+  display: flex;
+  width: calc(100vw * 4);
+  height: 600px;
+  animation: city 20s -10s linear infinite;
+}
+
+section.main .mn_bg .cloude li {
+  width: calc(100vw * 2);
+  height: 600px;
+  background-image: url(./../images/cloude.png);
+  background-size: cover;
+  background-repeat: repeat-x;
+}
+
+@keyframes city {
+  0% {
+    transform: translateX(0vw);
+  }
+  100% {
+    transform: translateX(-200vw);
+  }
+}
+
+section.main .mn_bg .bus {
+  position: absolute;
+  bottom: 50px;
+  left: calc(50% - 110px);
+  z-index: 150;
+  width: 220px;
+  height: 150px;
+  background-image: url(./../images/bus.png);
+  background-size: contain;
+}
+
+section.main .mn_bg .bus .wheel {
+  position: absolute;
+  bottom: 10px;
+  left: calc(50% - 75px);
+  width: 40px;
+  height: 40px;
+  background-image: url(./../images/wheel.png);
+  background-size: contain;
+  animation: wheel 2s linear infinite;
+}
+
+section.main .mn_bg .bus .wheel_b {
+  position: absolute;
+  left: calc(50% + 32px);
+}
+
+@keyframes wheel {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+section.main .mn_bg .road {
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 200px;
+  background-image: url(./../images/road.png);
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+
+section.main .talk {
+  position: absolute;
+  top: 170px;
+  left: calc(50% - 100px);
+  z-index: 500;
+  width: 200px;
+  height: 230px;
+  background-image: url(./../images/mn_talk.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: talk 2s infinite linear;
+}
+
+section.main .talk h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 32%;
+}
+
+section.main .talk h2 span {
+  display: block;
+  font-size: 2.2rem;
+  text-align: center;
+  color: #336ab3;
+}
+
+@keyframes talk {
+  0% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
+}
+
 section.course {
   width: 100vw;
   height: 900px;
-  background-color: #2e6d92;
+  background-color: #336ab3;
 }
 
 section.course .cs_container {
@@ -184,7 +315,7 @@ section.course .cs_container .cs_content .cs_pagination li a {
   width: 130px;
   height: 40px;
   margin-top: 20px;
-  color: #2e6d92;
+  color: #336ab3;
   font-size: 1.3rem;
   font-weight: 800;
   text-align: center;
@@ -220,7 +351,7 @@ section.course .cs_container .cs_content .cs_pagination li:hover > a::before {
 
 section.course .cs_container .cs_content .cs_pagination li.on > a {
   color: #fff;
-  background-color: #1f5574;
+  background-color: #254f85;
   box-shadow: inset 2px 0 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -239,7 +370,7 @@ section.course .cs_container .cs_content .cs_map ol {
   z-index: 100;
   width: 600px;
   height: 400px;
-  background-color: #2e6d92;
+  background-color: #336ab3;
 }
 
 section.course .cs_container .cs_content .cs_map ol li {
@@ -461,7 +592,7 @@ section.course .cs_container .cs_content .cs_map ul {
   width: 300px;
   height: 400px;
   padding: 0 25px;
-  background-color: #2e6d92;
+  background-color: #336ab3;
   box-sizing: border-box;
   transition: all 0.6s;
 }
@@ -909,7 +1040,7 @@ section.travel .tv_container .tv_content ul li a {
 
 section.festival {
   height: 200px;
-  background-color: #567a80;
+  background-color: #81a185;
 }
 
 section.festival .fv_container {
