@@ -2,6 +2,18 @@
   font-size: 0.652rem;
 }
 
+#wrap,
+body {
+  position: relative;
+  z-index: -9999;
+  width: 100vw;
+  color: #222;
+  font-family: "noto sans CJK KR";
+  font-size: 0.652rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
 header {
   position: fixed;
   z-index: 99999;
@@ -97,6 +109,29 @@ header.sticky div > a {
 
 header.sticky div > a:hover {
   color: #919191;
+}
+
+footer {
+  width: 100vw;
+  height: 150px;
+  margin: 80px 0 50px;
+  text-align: center;
+  border-top: 1px solid #000;
+}
+
+footer p {
+  margin-top: 30px;
+}
+
+footer address {
+  color: #999;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 50px;
+}
+
+footer address span {
+  font-weight: 800;
 }
 
 #wrap,
@@ -1230,27 +1265,29 @@ section.last .last_container .sport div .sp_bottom .right ul li ol {
   width: 450px;
 }
 
-section.last .last_container .sport div .sp_bottom .right ul li ol li div {
-  margin: 10px 0;
-}
-
-section.last .last_container .sport div .sp_bottom .right ul li ol li div tbody tr {
-  height: 30px;
-  line-height: 30px;
+section.last .last_container .sport div .sp_bottom .right ul li ol li div table {
+  width: 450px;
   border-bottom: 1px dotted #888;
 }
 
-section.last .last_container .sport div .sp_bottom .right ul li ol li div tbody tr th {
+section.last .last_container .sport div .sp_bottom .right ul li ol li div table tbody tr {
+  width: 450px;
+  height: 30px;
+  margin: 10px 0;
+  line-height: 30px;
+}
+
+section.last .last_container .sport div .sp_bottom .right ul li ol li div table tbody tr th {
   font-size: 1.2rem;
   font-weight: 600;
 }
 
-section.last .last_container .sport div .sp_bottom .right ul li ol li div tbody tr td {
+section.last .last_container .sport div .sp_bottom .right ul li ol li div table tbody tr td {
   color: #555;
   font-size: 1.1rem;
 }
 
-section.last .last_container .sport div .sp_bottom .right ul li ol li div tbody tr td i {
+section.last .last_container .sport div .sp_bottom .right ul li ol li div table tbody tr td i {
   color: #325dac;
   font-size: 1.3rem;
 }

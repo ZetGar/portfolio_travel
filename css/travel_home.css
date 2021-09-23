@@ -160,18 +160,6 @@ a.btn span:nth-of-type(2) {
   transition-delay: 0s;
 }
 
-#wrap,
-body {
-  position: relative;
-  z-index: -9999;
-  width: 100vw;
-  color: #222;
-  font-family: "noto sans CJK KR";
-  font-size: 0.652rem;
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-
 header {
   position: fixed;
   top: 0;

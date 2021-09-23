@@ -1157,23 +1157,28 @@ section.last {
 
                   li {
                     div {
-                      margin: 10px 0;
-                      tbody {
-                        tr {
-                          height: 30px;
-                          line-height: 30px;
-                          border-bottom: 1px dotted #888;
-                          th {
-                            font-size: 1.2rem;
-                            font-weight: 600;
-                          }
-                          td {
-                            color: #555;
-                            font-size: 1.1rem;
+                      table {
+                        width: 450px;
+                        border-bottom: 1px dotted #888;
 
-                            i {
-                              color: #325dac;
-                              font-size: 1.3rem;
+                        tbody {
+                          tr {
+                            width: 450px;
+                            height: 30px;
+                            margin: 10px 0;
+                            line-height: 30px;
+                            th {
+                              font-size: 1.2rem;
+                              font-weight: 600;
+                            }
+                            td {
+                              color: #555;
+                              font-size: 1.1rem;
+
+                              i {
+                                color: #325dac;
+                                font-size: 1.3rem;
+                              }
                             }
                           }
                         }
