@@ -637,7 +637,7 @@ section.main .talk h2 span {
 section.suggestion {
   position: relative;
   width: 100vw;
-  height: 300px;
+  height: 270px;
   background-color: #4dbdac;
 }
 
@@ -645,8 +645,8 @@ section.suggestion .sg_container {
   position: relative;
   top: -80px;
   z-index: 200;
-  width: 900px;
-  height: 350px;
+  width: 770px;
+  height: 320px;
   margin: 0 auto;
   padding: 30px;
   background-color: #fff;
@@ -660,74 +660,138 @@ section.suggestion .sg_container h2 {
   margin-bottom: 10px;
 }
 
-section.suggestion .sg_container select {
-  width: calc(100% / 6 - 20px);
+section.suggestion .sg_container .sg_text {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+}
+
+section.suggestion .sg_container .sg_text p.sg_p {
+  height: 25px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  color: #c0c0c0;
+  font-size: 1.2rem;
+  line-height: 30px;
+  border-bottom: 1px solid #c0c0c0;
+}
+
+section.suggestion .sg_container .sg_text .left .sg_local {
+  width: 100%;
+}
+
+section.suggestion .sg_container .sg_text .left .sg_local .ct_container {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  height: 60px;
+}
+
+section.suggestion .sg_container .sg_text .left .sg_local .ct_container select {
+  display: inline-block;
+  width: 150px;
   height: 30px;
+  margin-right: 12px;
+  margin-bottom: 30px;
   font-family: "noto sans CJK KR";
   font-size: 1.2rem;
   text-indent: 10px;
 }
 
-section.suggestion .sg_container select:nth-of-type(2) {
+section.suggestion .sg_container .sg_text .left .sg_local .ct_container select:nth-of-type(2) {
   display: none;
+  margin-right: 0;
 }
 
-section.suggestion .sg_container select input {
+section.suggestion .sg_container .sg_text .left .sg_data .ct_container {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  height: 60px;
+}
+
+section.suggestion .sg_container .sg_text .left .sg_data .ct_container input {
+  display: inline-block;
+  width: 145px;
+  height: 30px;
+  margin-right: 12px;
+  margin-bottom: 30px;
+  font-family: "noto sans CJK KR";
+  font-size: 1.2rem;
+  text-indent: 10px;
+}
+
+section.suggestion .sg_container .sg_text .left .sg_data .ct_container input:nth-of-type(2) {
+  margin-right: 0;
+}
+
+section.suggestion .sg_container .sg_text .right {
+  position: relative;
+  width: 320px;
+}
+
+section.suggestion .sg_container .sg_text .right .ct_contet div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+section.suggestion .sg_container .sg_text .right .ct_contet div:nth-of-type(2) {
+  margin-top: 20px;
+}
+
+section.suggestion .sg_container .sg_text .right .ct_contet div p {
   width: 200px;
-  height: 40px;
-  margin-bottom: 20px;
-  font-family: "noto sans CJK KR";
-  text-indent: 10px;
-  font-size: 1.2rem;
-  border: 1px solid #555;
+  color: #777;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 30px;
 }
 
-section.suggestion .sg_container .where {
+section.suggestion .sg_container .sg_text .right .ct_contet div p i {
+  width: 30px;
+  color: #777;
+  font-size: 1.8rem;
+  line-height: 25px;
+}
+
+section.suggestion .sg_container .sg_text .right .ct_contet div > div {
   display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid #555;
+  justify-content: right;
+  margin-top: 0;
 }
 
-section.suggestion .sg_container .where input {
-  width: 170px;
-  height: 40px;
-  margin-bottom: 20px;
-  font-family: "noto sans CJK KR";
-  text-indent: 10px;
-  font-size: 1.2rem;
-  border: 1px solid #555;
+section.suggestion .sg_container .sg_text .right .ct_contet div > div > p {
+  width: 50px;
+  height: 30px;
+  color: #777;
+  font-size: 1.5rem;
+  line-height: 30px;
+  text-align: center;
 }
 
-section.suggestion .sg_container .where .date {
-  display: flex;
-  justify-content: space-between;
-  width: 250px;
-  height: 42px;
-  margin-bottom: 20px;
-  font-family: "noto sans CJK KR";
-  text-indent: 10px;
-  font-size: 1.2rem;
-  line-height: 40px;
-  border: 1px solid #555;
-}
-
-section.suggestion .sg_container .where .date input {
-  width: 130px;
-  height: 42px;
-  margin: 0;
-  border: none;
-}
-
-section.suggestion .sg_container .where a {
+section.suggestion .sg_container .sg_text .right .ct_contet div > div a {
   display: block;
-  width: 120px;
-  height: 42px;
-  margin-bottom: 20px;
+  width: 30px;
+  height: 30px;
+  color: #777;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 30px;
+  text-align: center;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+section.suggestion .sg_container .sg_text .right > a {
+  position: absolute;
+  right: 0;
+  bottom: 25px;
+  padding: 10px 35px;
   color: #fff;
   font-size: 1.2rem;
-  line-height: 42px;
   text-align: center;
-  font-weight: 800;
   background-color: #222;
 }
 

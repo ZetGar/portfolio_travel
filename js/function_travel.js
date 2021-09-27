@@ -66,68 +66,155 @@ $(function(){
   // 호텔예약 input
   const jeju = ['제주도', '제주시', '서귀포시'];
   const busan = ['부산', '해운대구, 기장군', '부산역, 남포, 자갈치, 송도, 영도', '수영구, 광안리', '서면, 연산', '동래구, 사상구'];
+  const seoul = ['서울', '강남구, 서초구, 송파구,광진구, 강동구', '종로구, 동대문구', '영등포, 여의도', '강서구, 김포공항', '마포구, 서대문구, 신촌, 홍대', '성북구, 도봉구, 강북구', '구로구, 관악구', '중구, 용산구, 이태원'];
+  const gangwon = ['강원도', '속초', '강릉', '양양', '평창', '춘천', '홍천', '정선군'];
+  const chung = ['충청북도', '충청남도', '대전', '천안', '태안', '단양', '충주(수안보)', '제천', '증평', '세종'];
+  const incheon = ['인천', '중구(인천공항, 영종도,을왕리,월미도)', '연수구, 송도'];
+  const gyeonggi = ['경기도', '고양시', '가평', '수원', '용인', '화성'];
+  const gyeongsang = ['경상북도', '경상남도', '경주', '거제', '포항', '통영', '남해', '울산', '안동', '대구'];
+  const jeonla = ['전라북도', '전라남도', '전주', '여수', '광주', '목표', '군산'];
+
 
 
   $('#local1').on('change', function(){
-    // $('#local2').html('').show();
-    // nowIdx = $('#local1>option').index(this);
-    // console.log(nowIdx);
-
     let value = $('#local1').val();
     console.log(value);
 
-    let valText =  String(value);
-    console.log(valText);
-    typeof(valText);
-
-
     $('#local2').html('').show();
 
-    if($('#local1').val() == value){
-      for(let i = 0; i < value.length; i++){
-        let tamplete = `<option>${value[i]}</option>`;
+    if($('#local1').val() == 'jeju'){
+      for(let i = 0; i < jeju.length; i++){
+        let tamplete = `<option>${jeju[i]}</option>`;
         $('#local2').append(tamplete);
       }
-    } else {
-      $('#local2').hide();
-    }
-  
-    // if($('#local1').val() == 'busan'){
-    //   $('#local2').html('').show();
-    //   for(let i = 0; i < busan.length; i++){
-    //     let tamplete = `<option>${busan[i]}</option>`;
-    //     $('#local2').append(tamplete);
-    //   }
-    // } else {
-    //     $('#local2').hide();
-    // }
-
+    } else if($('#local1').val() == 'busan'){
+      $('#local2').html('').show();
+      for(let i = 0; i < busan.length; i++){
+        let tamplete = `<option>${busan[i]}</option>`;
+        $('#local2').append(tamplete);
+      }
+    } else if($('#local1').val() == 'seoul'){
+      $('#local2').html('').show();
+      for(let i = 0; i < seoul.length; i++){
+        let tamplete = `<option>${seoul[i]}</option>`;
+        $('#local2').append(tamplete);
+      }
+    }else if($('#local1').val() == 'gangwon'){
+      $('#local2').html('').show();
+      for(let i = 0; i < gangwon.length; i++){
+        let tamplete = `<option>${gangwon[i]}</option>`;
+        $('#local2').append(tamplete);
+      }
+    } else if($('#local1').val() == 'chung'){
+      $('#local2').html('').show();
+      for(let i = 0; i < chung.length; i++){
+        let tamplete = `<option>${chung[i]}</option>`;
+        $('#local2').append(tamplete);
+      }
+    } else if($('#local1').val() == 'incheon'){
+      $('#local2').html('').show();
+      for(let i = 0; i < incheon.length; i++){
+        let tamplete = `<option>${incheon[i]}</option>`;
+        $('#local2').append(tamplete);
+      }
+    } else if($('#local1').val() == 'gyeonggi'){
+      $('#local2').html('').show();
+      for(let i = 0; i < gyeonggi.length; i++){
+        let tamplete = `<option>${gyeonggi[i]}</option>`;
+        $('#local2').append(tamplete);
+      }
+    } else if($('#local1').val() == 'gyeongsang'){
+      $('#local2').html('').show();
+      for(let i = 0; i < gyeongsang.length; i++){
+        let tamplete = `<option>${gyeongsang[i]}</option>`;
+        $('#local2').append(tamplete);
+      }
+    } else if($('#local1').val() == 'jeonla'){
+      $('#local2').html('').show();
+      for(let i = 0; i < jeonla.length; i++){
+        let tamplete = `<option>${jeonla[i]}</option>`;
+        $('#local2').append(tamplete);
+      }
+    } 
   });
-  // if($('#local1').val() == '제주'){
-  //   $('#local2').html('');
 
-  //   for(let i = 0; i < 호텔지역.length; i++){
-  //     let tamplete = `<option>${호텔지역[i]}</option>`;
-  //     $('#local2').append(tamplete);
-  //   }
+  // 호텔예약 인원, 객실
+  const $plusPeo = $('.peoplus');
+  const $miusPeo = $('.peomius');
+  const $textPeo = $('.peop');
+  const $plusRom = $('.romplus');
+  const $miusRom = $('.rommius');
+  const $textRom = $('.romp');
+  
+  let sum=0;
+  
+  $plusPeo.on('click', function(evt){
+    evt.preventDefault();
 
-  // } else{
-  //   $('#local2').hide();
-  // }
+    for(let i=0;i<=0;i++){
+      sum += (i+1);
+    }
+    $textPeo.text(sum);
+    console.log(sum);
 
-
-  // if($('#local1').val() == '제주'){
-  //   $('#local2').html('');
-
-  //   let tamplete = `<option>제주도</option>`;
-  //   $('#local2').append(tamplete);
-
-  // } else if ($('#local1').val() == '부산'){
-  //   $('#local2').html('');
+    if(sum<=0){
+      sum = 1;
+      $textPeo.text(1);
+    }
     
-  //   let tamplete = `<option>부산</option>`;
-  //   $('#local2').append(tamplete);
-  // }
+  });
+
+  $miusPeo.on('click', function(evt){
+    evt.preventDefault();
+
+    for(let i=0;i>=0;i--){
+      sum -= (i+1);
+    } 
+
+
+    $textPeo.text(sum);
+    console.log(sum);
+
+    if(sum<=0){
+      sum = 1;
+      $textPeo.text(1);
+    }
+  });
+
+
+  $plusRom.on('click', function(evt){
+    evt.preventDefault();
+
+    for(let i=0;i<=0;i++){
+      sum += (i+1);
+    }
+    $textRom.text(sum);
+    console.log(sum);
+
+    if(sum<=0){
+      sum = 1;
+      $textRom.text(1);
+    }
+    
+  });
+
+  $miusRom.on('click', function(evt){
+    evt.preventDefault();
+
+    for(let i=0;i>=0;i--){
+      sum -= (i+1);
+    } 
+
+
+    $textRom.text(sum);
+    console.log(sum);
+
+    if(sum<=0){
+      sum = 1;
+      $textRom.text(1);
+    }
+  });
+
 
 
 
