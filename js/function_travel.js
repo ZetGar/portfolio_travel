@@ -63,6 +63,72 @@ $(function(){
   });
 
 
+  // 호텔예약 input
+  const jeju = ['제주도', '제주시', '서귀포시'];
+  const busan = ['부산', '해운대구, 기장군', '부산역, 남포, 자갈치, 송도, 영도', '수영구, 광안리', '서면, 연산', '동래구, 사상구'];
+
+
+  $('#local1').on('change', function(){
+    // $('#local2').html('').show();
+    // nowIdx = $('#local1>option').index(this);
+    // console.log(nowIdx);
+
+    let value = $('#local1').val();
+    console.log(value);
+
+    let valText =  String(value);
+    console.log(valText);
+    typeof(valText);
+
+
+    $('#local2').html('').show();
+
+    if($('#local1').val() == value){
+      for(let i = 0; i < value.length; i++){
+        let tamplete = `<option>${value[i]}</option>`;
+        $('#local2').append(tamplete);
+      }
+    } else {
+      $('#local2').hide();
+    }
+  
+    // if($('#local1').val() == 'busan'){
+    //   $('#local2').html('').show();
+    //   for(let i = 0; i < busan.length; i++){
+    //     let tamplete = `<option>${busan[i]}</option>`;
+    //     $('#local2').append(tamplete);
+    //   }
+    // } else {
+    //     $('#local2').hide();
+    // }
+
+  });
+  // if($('#local1').val() == '제주'){
+  //   $('#local2').html('');
+
+  //   for(let i = 0; i < 호텔지역.length; i++){
+  //     let tamplete = `<option>${호텔지역[i]}</option>`;
+  //     $('#local2').append(tamplete);
+  //   }
+
+  // } else{
+  //   $('#local2').hide();
+  // }
+
+
+  // if($('#local1').val() == '제주'){
+  //   $('#local2').html('');
+
+  //   let tamplete = `<option>제주도</option>`;
+  //   $('#local2').append(tamplete);
+
+  // } else if ($('#local1').val() == '부산'){
+  //   $('#local2').html('');
+    
+  //   let tamplete = `<option>부산</option>`;
+  //   $('#local2').append(tamplete);
+  // }
+
 
 
   //section_travel_slide : 하트 클릭

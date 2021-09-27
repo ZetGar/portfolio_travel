@@ -160,7 +160,8 @@ a.btn span:nth-of-type(2) {
   transition-delay: 0s;
 }
 
-#wrap {
+#wrap,
+body {
   position: relative;
   z-index: -100;
 }
@@ -657,6 +658,28 @@ section.suggestion .sg_container h2 {
   font-size: 1.5rem;
   padding-bottom: 10px;
   margin-bottom: 10px;
+}
+
+section.suggestion .sg_container select {
+  width: calc(100% / 6 - 20px);
+  height: 30px;
+  font-family: "noto sans CJK KR";
+  font-size: 1.2rem;
+  text-indent: 10px;
+}
+
+section.suggestion .sg_container select:nth-of-type(2) {
+  display: none;
+}
+
+section.suggestion .sg_container select input {
+  width: 200px;
+  height: 40px;
+  margin-bottom: 20px;
+  font-family: "noto sans CJK KR";
+  text-indent: 10px;
+  font-size: 1.2rem;
+  border: 1px solid #555;
 }
 
 section.suggestion .sg_container .where {
