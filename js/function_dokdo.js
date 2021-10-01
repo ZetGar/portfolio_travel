@@ -21,8 +21,6 @@ $(function () {
     arrTopVal[i] = $("section").eq(i).offset().top;
   }
 
-  console.log(arrTopVal);
-
   const moveFn = function (idx) {
     $("html,body")
       .stop()
@@ -43,7 +41,7 @@ $(function () {
   // 스크롤시 gnb 활성화
   $(window).on("scroll", function () {
     const scrollTop = $(window).scrollTop();
-    console.log(scrollTop);
+    // console.log(scrollTop);
 
     for (let i = 0; i < 6; i++) {
       if (scrollTop >= arrTopVal[i] - 80) {
@@ -103,30 +101,15 @@ $(function () {
     }
   });
 
-  // // 독도의 구성
-  // const $comBox = $(".com_box > .com_boxcontainer");
-  // const $plusX = $("section.component .plusX");
+  // 독도의 자연
+  const $nt_pagination = $(".na_gnb>li");
+  const $nt_content = $(".na_box");
 
-  // $comBox.on("click", function () {
-  //   let leVal = $(this).css("left");
+  $nt_pagination.on("click", function (evt) {
+    evt.preventDefault();
+    let nowIdx = $nt_pagination.index(evt.currentTarget);
+    console.log(nowIdx);
 
-  //   if (leVal < "0") {
-  //     $(this).css({ left: "0" });
-  //     $plusX.css({
-  //       animationName: "plusX",
-  //       animationDuration: "1s",
-  //       animationFillMode: "forwards",
-  //     });
-  //     $(".com_box > .com_boxcontainer  p").css({
-  //       transform: "translateX(0px)",
-  //     });
-  //   } else {
-  //     $(this).css({ left: "-900px" });
-  //     $plusX.css({
-  //       animationName: "plus",
-  //       animationDuration: "1s",
-  //       animationFillMode: "forwards",
-  //     });
-  //   }
-  // });
+    $nt_content.eq(nowIdx).fadeIn().siblings().hide();
+  });
 });
