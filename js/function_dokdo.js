@@ -34,9 +34,8 @@ $(function () {
 
   $mnu.on("click", function (evt) {
     evt.preventDefault();
-    alert();
 
-    const nowIdx = $mnu.index(evt.currentTarget);
+    let nowIdx = $mnu.index(evt.currentTarget);
 
     moveFn(nowIdx);
   });
