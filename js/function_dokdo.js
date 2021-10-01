@@ -35,7 +35,7 @@ $(function () {
   $mnu.on("click", function (evt) {
     evt.preventDefault();
 
-    let nowIdx = $mnu.index(evt.currentTarget);
+    let nowIdx = $mnu.index(evt.currentTarget) + 1;
 
     moveFn(nowIdx);
   });
@@ -48,7 +48,7 @@ $(function () {
     for (let i = 0; i < 6; i++) {
       if (scrollTop >= arrTopVal[i] - 80) {
         $mnu
-          .eq(i - 2)
+          .eq(i - 1)
           .parent("li")
           .addClass("on")
           .siblings()
