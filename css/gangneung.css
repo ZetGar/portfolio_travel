@@ -146,6 +146,28 @@ body {
   z-index: -999;
 }
 
+a.prev {
+  display: block;
+  position: fixed;
+  top: 80px;
+  right: calc(50% - 600px);
+  z-index: 99999;
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  line-height: 40px;
+  text-indent: -9999px;
+  border-radius: 5px;
+  background-color: #fff;
+  background-image: url(./../images/prev.svg);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 3px 3px rgba(0, 0, 0, 0.2), inset 0 0 3px rgba(255, 255, 255, 0.2), 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
 section.main {
   position: relative;
   width: 100vw;
