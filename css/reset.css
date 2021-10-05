@@ -4,6 +4,9 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 
+caption {
+  text-indent: -9999px;
+}
 html,
 body {
   width: 100%;
