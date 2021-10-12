@@ -146,28 +146,6 @@ body {
   z-index: -999;
 }
 
-a.prev {
-  display: block;
-  position: fixed;
-  top: 80px;
-  right: calc(50% - 600px);
-  z-index: 99999;
-  width: 40px;
-  height: 40px;
-  font-size: 2rem;
-  font-weight: 800;
-  text-align: center;
-  line-height: 40px;
-  text-indent: -9999px;
-  border-radius: 5px;
-  background-color: #fff;
-  background-image: url(./../images/prev.svg);
-  background-size: 70%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 3px 3px rgba(0, 0, 0, 0.2), inset 0 0 3px rgba(255, 255, 255, 0.2), 0 0 5px rgba(255, 255, 255, 0.2);
-}
-
 section.main {
   position: relative;
   width: 100vw;
@@ -500,7 +478,7 @@ section.course .cs_container .cs_content .cs_map ol li:nth-of-type(2) .cs_pic a:
 }
 
 section.course .cs_container .cs_content .cs_map ol li:nth-of-type(3) .cs_pic {
-  background-image: url(./../img/course1.svg);
+  background-image: url(./../img/course3.svg);
 }
 
 section.course .cs_container .cs_content .cs_map ol li:nth-of-type(3) .cs_pic a:nth-of-type(1) {
@@ -509,37 +487,37 @@ section.course .cs_container .cs_content .cs_map ol li:nth-of-type(3) .cs_pic a:
 }
 
 section.course .cs_container .cs_content .cs_map ol li:nth-of-type(3) .cs_pic a:nth-of-type(2) {
-  top: 42px;
-  left: 205px;
+  top: 80px;
+  left: 183px;
 }
 
 section.course .cs_container .cs_content .cs_map ol li:nth-of-type(3) .cs_pic a:nth-of-type(3) {
-  top: 20px;
-  left: 373px;
+  top: 200px;
+  left: 177px;
 }
 
 section.course .cs_container .cs_content .cs_map ol li:nth-of-type(3) .cs_pic a:nth-of-type(4) {
-  top: 220px;
-  left: 498px;
+  top: 313px;
+  left: 325px;
 }
 
 section.course .cs_container .cs_content .cs_map ol li:nth-of-type(3) .cs_pic a:nth-of-type(5) {
-  top: 260px;
-  left: 323px;
+  top: 305px;
+  left: 425px;
 }
 
 section.course .cs_container .cs_content .cs_map ol li:nth-of-type(3) .cs_pic a:nth-of-type(6) {
-  top: 288px;
-  left: 178px;
+  top: 130px;
+  left: 535px;
 }
 
 section.course .cs_container .cs_content .cs_map ol li:nth-of-type(3) .cs_pic a:nth-of-type(7) {
-  top: 315px;
-  left: 90px;
+  top: 20px;
+  left: 420px;
 }
 
 section.course .cs_container .cs_content .cs_map ol li:nth-of-type(4) .cs_pic {
-  background-image: url(./../img/course1.svg);
+  background-image: url(./../img/course4.svg);
 }
 
 section.course .cs_container .cs_content .cs_map ol li:nth-of-type(4) .cs_pic a:nth-of-type(1) {
