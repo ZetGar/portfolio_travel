@@ -39,8 +39,10 @@ header {
     }
 
     nav {
-      position: absolute;
-      left: 550px;
+      // position: absolute;
+      // left: 550px;
+      width: 100vw;
+      margin: 0 auto;
       .gnb {
         display: flex;
         justify-content: space-between;
@@ -94,17 +96,19 @@ header {
       color: #fff;
       font-size: 2.3rem;
     }
-    nav > .gnb {
-      li {
-        a {
-          height: 45px;
-          color: #fff;
-          font-size: 1.15rem;
-        }
-        &:hover > a,
-        &.on > a {
-          color: #f3da6a;
-          border-bottom: 5px solid #f3da6a;
+    nav {
+      .gnb {
+        li {
+          a {
+            height: 45px;
+            color: #fff;
+            font-size: 1.15rem;
+          }
+          &:hover > a,
+          &.on > a {
+            color: #f3da6a;
+            border-bottom: 5px solid #f3da6a;
+          }
         }
       }
     }
